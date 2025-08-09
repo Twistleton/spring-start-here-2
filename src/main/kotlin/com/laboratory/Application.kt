@@ -16,6 +16,11 @@ fun main(args: Array<String>) {
 	val commentService = context.getBean(CommentService::class.java)
 
 	commentService.publishComment(Comment("Walk the dog", "Hugo"))
-	
+
+	val cs1 = context.getBean(CommentService::class.java)
+	val cs2 = context.getBean(CommentService::class.java)
+
+	println("cs1 == cs2: ${cs1 == cs2}")
+
 
 }
